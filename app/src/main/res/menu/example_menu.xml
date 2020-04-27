@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<item
+    android:id="@+id/profits_menu"
+    android:title=""
+    app:showAsAction="ifRoom"
+    android:icon="@drawable/ic_more_vert_white_24dp">
+
+<menu>
+
+
+    <item
+        android:id="@+id/byMonth"
+        android:title="Enquiry for month"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/lowestProfits"
+        android:title="Sort by lowest"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/highestProfits"
+        android:title="Sort by highest"
+        app:showAsAction="never"/>
+</menu>
+</item>
+</menu>

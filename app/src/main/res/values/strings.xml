@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Payments</string>
+    <string name="strings_categories">Categories</string>
+    <string name="select_date">Select Date</string>
+    <string name="description">Description</string>
+    <string name="sum">Sum</string>
+    <string name="edit_description">Description</string>
+    <string name="edit_sum">Sum 0.00</string>
+</resources>
