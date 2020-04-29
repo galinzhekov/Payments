@@ -23,7 +23,7 @@ import com.example.payments.persistence.PaymentsRepository;
 import java.util.Calendar;
 
 public class EditActivity extends AppCompatActivity implements
-        View.OnClickListener, TextWatcher {
+        View.OnClickListener, TextWatcher, View.OnFocusChangeListener {
 
     private static final String TAG = "EditActivity";
     private static final int EDIT_MODE_ENABLED = 1;
@@ -182,6 +182,8 @@ public class EditActivity extends AppCompatActivity implements
         mLinedEditText.setOnClickListener(this);
         etSum.setOnClickListener(this);
         tvDate.setOnClickListener(this);
+        etSum.setOnFocusChangeListener(this);
+        mLinedEditText.setOnFocusChangeListener(this);
     }
 
     private void hideSoftKeyboard(){
@@ -356,5 +358,16 @@ public class EditActivity extends AppCompatActivity implements
             }
         }
         return strMonth;
+    }
+
+    @Override
+    public void onFocusChange(View v, boolean hasFocus) {
+        if(hasFocus) {
+            mBackArrowContainer.setVisibility(View.GONE);
+            mCheckContainer.setVisibility(View.VISIBLE);
+
+            mViewTitle.setVisibility(View.GONE);
+            mEditTitle.setVisibility(View.VISIBLE);
+        }
     }
 }

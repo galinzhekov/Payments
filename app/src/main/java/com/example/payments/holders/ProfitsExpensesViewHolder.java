@@ -40,7 +40,6 @@ public class ProfitsExpensesViewHolder extends RecyclerView.ViewHolder implement
 
     @Override
     public void onClick(View v) {
-        itemView.setOnClickListener(this);
         onItemListener.onItemClick(getAdapterPosition());
     }
 }
