@@ -156,9 +156,10 @@ public class EditActivity extends AppCompatActivity implements
 
         iMode = EDIT_MODE_DISABLED;
         String temp = mLinedEditText.getText().toString();
+        String temp1 = etSum.getText().toString();
         temp = temp.replace("\n", "");
         temp = temp.replace(" ", "");
-        if(temp.length() > 0){
+        if(temp.length() > 0 || temp1.length() > 0){
             mFinalProfit.setStrTitle(mEditTitle.getText().toString());
             mFinalProfit.setStrDescription(mLinedEditText.getText().toString());
             mFinalProfit.setStrSum(etSum.getText().toString());
