@@ -16,12 +16,12 @@
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/lowestProfits"
+        android:id="@+id/lowestSums"
         android:title="Sort by lowest"
         app:showAsAction="never"/>
 
     <item
-        android:id="@+id/highestProfits"
+        android:id="@+id/highestSums"
         android:title="Sort by highest"
         app:showAsAction="never"/>
 </menu>

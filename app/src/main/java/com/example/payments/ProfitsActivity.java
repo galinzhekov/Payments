@@ -46,8 +46,8 @@ public class ProfitsActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profits);
-        mRecyclerView = findViewById(R.id.profitsView);
-        fab = findViewById(R.id.fab);
+        mRecyclerView = findViewById(R.id.expensesView);
+        fab = findViewById(R.id.fab1);
         fab.setOnClickListener(this);
 
         mPaymentsRepository = new PaymentsRepository(this);
@@ -55,7 +55,7 @@ public class ProfitsActivity extends AppCompatActivity implements
         initRecyclerView();
         retrievePayments();
 
-        setSupportActionBar(findViewById(R.id.toolbar));
+        setSupportActionBar(findViewById(R.id.toolbar1));
         setTitle("Profits");
     }
 
@@ -183,12 +183,12 @@ public class ProfitsActivity extends AppCompatActivity implements
                 addContactFragment.show(fm, "profits_by_month");
                 return true;
             }
-            case R.id.lowestProfits:{
+            case R.id.lowestSums:{
                 clear();
                 lowestProfits();
                 return true;
             }
-            case R.id.highestProfits:{
+            case R.id.highestSums:{
                 clear();
                 highestProfits();
                 return true;

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -25,7 +25,7 @@
         android:id="@+id/btnProfits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="400dp"
         android:background="#fff"
         android:padding="10sp"
         android:paddingStart="20sp"
@@ -50,18 +50,5 @@
         app:layout_constraintTop_toBottomOf="@+id/btnProfits" />
 
 
-    <Button
-        android:id="@+id/btnLoans"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:background="#fff"
-        android:padding="10sp"
-        android:paddingStart="20sp"
-        android:text="Loans"
-        android:textAlignment="textStart"
-        android:textColor="@color/colorPrimary"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnExpenses" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

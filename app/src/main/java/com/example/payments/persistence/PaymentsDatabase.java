@@ -6,10 +6,10 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
-import com.example.payments.models.Categories;
+import com.example.payments.models.Expenses;
 import com.example.payments.models.Profits;
 
-@Database(entities = {Profits.class, Categories.class}, version = 1)
+@Database(entities = {Profits.class, Expenses.class}, version = 1)
 public abstract class PaymentsDatabase extends RoomDatabase {
     public static final String DATABASE_NAME = "payments_db";
 
@@ -27,4 +27,5 @@ public abstract class PaymentsDatabase extends RoomDatabase {
     }
 
     public abstract ProfitsDao getProfitsDao();
+    public abstract ExpensesDao getExpensesDao();
 }

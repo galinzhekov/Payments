@@ -20,9 +20,6 @@ public class Profits implements Parcelable {
     @ColumnInfo(name = "description")
     private String strDescription;
 
-    @ColumnInfo(name = "categoryId")
-    private int iCategory;
-
     @ColumnInfo(name = "date")
     private String strDate;
 
@@ -33,7 +30,6 @@ public class Profits implements Parcelable {
         id = in.readInt();
         strSum = in.readString();
         strDescription = in.readString();
-        iCategory = in.readInt();
         strDate = in.readString();
         strTitle = in.readString();
     }
@@ -70,14 +66,6 @@ public class Profits implements Parcelable {
         this.strDescription = strDescription;
     }
 
-    public int getICategory() {
-        return iCategory;
-    }
-
-    public void setiCategory(int iCategory) {
-        this.iCategory = iCategory;
-    }
-
     public String getStrDate() {
         return strDate;
     }
@@ -93,10 +81,9 @@ public class Profits implements Parcelable {
     @Ignore
     public Profits(){}
 
-    public Profits(String strSum, String strDescription, int iCategory, String strDate, String strTitle) {
+    public Profits(String strSum, String strDescription, String strDate, String strTitle) {
         this.strSum = strSum;
         this.strDescription = strDescription;
-        this.iCategory = iCategory;
         this.strDate = strDate;
         this.strTitle = strTitle;
     }
@@ -111,7 +98,6 @@ public class Profits implements Parcelable {
         dest.writeInt(id);
         dest.writeString(strSum);
         dest.writeString(strDescription);
-        dest.writeInt(iCategory);
         dest.writeString(strDate);
         dest.writeString(strTitle);
     }
@@ -122,7 +108,6 @@ public class Profits implements Parcelable {
                 "id=" + id +
                 ", strSum='" + strSum + '\'' +
                 ", strDescription='" + strDescription + '\'' +
-                ", iCategory=" + iCategory +
                 ", strDate='" + strDate + '\'' +
                 ", strTitle='" + strTitle + '\'' +
                 '}';

@@ -29,17 +29,20 @@ public class EditActivity extends AppCompatActivity implements
     private static final int EDIT_MODE_ENABLED = 1;
     private static final int EDIT_MODE_DISABLED = 0;
 
+    //Ui components
     private TextView tvDate;
     private DatePickerDialog.OnDateSetListener mDateSetListener;
     private LinedEditText mLinedEditText;
     private EditText mEditTitle, etSum;
     private TextView mViewTitle;
+    private RelativeLayout mCheckContainer, mBackArrowContainer;
+    private ImageButton mCheck, mBackArrow;
+
+    //vars
+    private PaymentsRepository mPaymentsRepository;
     private boolean mIsNewItem;
     private Profits mInitialProfit;
     private int iMode;
-    private RelativeLayout mCheckContainer, mBackArrowContainer;
-    private ImageButton mCheck, mBackArrow;
-    private PaymentsRepository mPaymentsRepository;
     private Profits mFinalProfit;
 
     @Override
@@ -47,11 +50,11 @@ public class EditActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit);
 
-        tvDate = findViewById(R.id.tvEditDate);
-        mLinedEditText = findViewById(R.id.etDescription);
+        tvDate = findViewById(R.id.tvEditDate1);
+        mLinedEditText = findViewById(R.id.etDescription1);
         mEditTitle = findViewById(R.id.item_edit_title);
         mViewTitle = findViewById(R.id.item_text_title);
-        etSum = findViewById(R.id.etSum);
+        etSum = findViewById(R.id.etSum1);
         mCheckContainer = findViewById(R.id.check_container);
         mBackArrowContainer = findViewById(R.id.back_arrow_container);
         mCheck = findViewById(R.id.toolbar_check);
@@ -103,7 +106,6 @@ public class EditActivity extends AppCompatActivity implements
             mFinalProfit.setStrSum(mInitialProfit.getStrSum());
             mFinalProfit.setStrDescription(mInitialProfit.getStrDescription());
             mFinalProfit.setId(mInitialProfit.getId());
-            mFinalProfit.setiCategory(mInitialProfit.getICategory());
 
             mIsNewItem = false;
             iMode = EDIT_MODE_DISABLED;
@@ -164,7 +166,6 @@ public class EditActivity extends AppCompatActivity implements
             mFinalProfit.setStrDescription(mLinedEditText.getText().toString());
             mFinalProfit.setStrSum(etSum.getText().toString());
             mFinalProfit.setStrDate(tvDate.getText().toString());
-            mFinalProfit.setiCategory(1);
 
             if(!mFinalProfit.getStrDescription().equals(mInitialProfit.getStrDescription())
             || !mFinalProfit.getStrSum().equals(mInitialProfit.getStrSum())
@@ -206,7 +207,7 @@ public class EditActivity extends AppCompatActivity implements
                 disableEditMode();
                 break;
             }
-            case R.id.tvEditDate:{
+            case R.id.tvEditDate1:{
                 Calendar calendar = Calendar.getInstance();
                 int year = calendar.get(Calendar.YEAR);
                 int month = calendar.get(Calendar.MONTH);
@@ -219,14 +220,14 @@ public class EditActivity extends AppCompatActivity implements
                 enableEditMode();
                 break;
             }
-            case R.id.etSum:{
+            case R.id.etSum1:{
                 enableEditMode();
                 etSum.requestFocus();
                 etSum.setSelection(etSum.length());
                 showSoftKeyboard();
                 break;
             }
-            case R.id.etDescription:{
+            case R.id.etDescription1:{
                 enableEditMode();
                 mLinedEditText.requestFocus();
                 mLinedEditText.setSelection(mLinedEditText.length());

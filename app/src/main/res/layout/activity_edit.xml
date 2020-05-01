@@ -10,7 +10,7 @@
     tools:context=".EditActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+        android:id="@+id/appBarLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,7 +19,7 @@
 
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar1"
             android:layout_width="match_parent"
             android:layout_height="?actionBarSize"
             android:background="?attr/colorPrimary"
@@ -33,7 +33,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
-        android:id="@+id/tvEditDate"
+        android:id="@+id/tvEditDate1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -41,10 +41,10 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout1" />
 
     <com.example.payments.LinedEditText
-        android:id="@+id/etDescription"
+        android:id="@+id/etDescription1"
         android:layout_width="329dp"
         android:layout_height="451dp"
         android:layout_marginTop="35dp"
@@ -55,11 +55,11 @@
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etSum"
+        app:layout_constraintTop_toBottomOf="@+id/etSum1"
         android:imeOptions="flagNoExtractUi"/>
 
     <EditText
-        android:id="@+id/etSum"
+        android:id="@+id/etSum1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -69,7 +69,7 @@
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvEditDate"
+        app:layout_constraintTop_toBottomOf="@+id/tvEditDate1"
         android:imeOptions="flagNoExtractUi"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

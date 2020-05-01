@@ -2,11 +2,11 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "66f2cbfd78a75bcc9d04763c1ac18830",
+    "identityHash": "12454ac4126dde4631b2044c9919e320",
     "entities": [
       {
         "tableName": "profits",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sum` TEXT, `description` TEXT, `categoryId` INTEGER NOT NULL, `date` TEXT, `title` TEXT)",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sum` TEXT, `description` TEXT, `date` TEXT, `title` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -25,12 +25,6 @@
             "columnName": "description",
             "affinity": "TEXT",
             "notNull": false
-          },
-          {
-            "fieldPath": "iCategory",
-            "columnName": "categoryId",
-            "affinity": "INTEGER",
-            "notNull": true
           },
           {
             "fieldPath": "strDate",
@@ -55,8 +49,8 @@
         "foreignKeys": []
       },
       {
-        "tableName": "categories",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `category` TEXT)",
+        "tableName": "expenses",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `sum` TEXT, `description` TEXT, `date` TEXT, `title` TEXT)",
         "fields": [
           {
             "fieldPath": "id",
@@ -65,8 +59,26 @@
             "notNull": true
           },
           {
-            "fieldPath": "strCategory",
-            "columnName": "category",
+            "fieldPath": "strSum",
+            "columnName": "sum",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "strDescription",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "strDate",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "strTitle",
+            "columnName": "title",
             "affinity": "TEXT",
             "notNull": false
           }
@@ -84,7 +96,7 @@
     "views": [],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '66f2cbfd78a75bcc9d04763c1ac18830')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '12454ac4126dde4631b2044c9919e320')"
     ]
   }
 }

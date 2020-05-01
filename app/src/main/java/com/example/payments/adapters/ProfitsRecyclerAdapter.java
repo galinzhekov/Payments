@@ -1,7 +1,6 @@
 package com.example.payments.adapters;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.payments.R;
 import com.example.payments.holders.ProfitsExpensesViewHolder;
+import com.example.payments.listeners.OnItemListener;
 import com.example.payments.models.Profits;
 
 import java.util.ArrayList;
@@ -19,9 +19,9 @@ public class ProfitsRecyclerAdapter extends RecyclerView.Adapter<ProfitsExpenses
 
     private ArrayList<Profits> mProfits;
 
-    private com.example.payments.listeners.OnItemListener mOnItemListener;
+    private OnItemListener mOnItemListener;
 
-    public ProfitsRecyclerAdapter(ArrayList<Profits> profits, com.example.payments.listeners.OnItemListener onItemListener) {
+    public ProfitsRecyclerAdapter(ArrayList<Profits> profits, OnItemListener onItemListener) {
         this.mProfits = profits;
         this.mOnItemListener = onItemListener;
     }

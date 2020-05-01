@@ -1,6 +1,5 @@
 package com.example.payments.holders;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
