@@ -310,47 +310,47 @@ public class EditActivity extends AppCompatActivity implements
     public String monthNumberToName(int iMonth){
         String strMonth;
         switch(iMonth){
-            case 1:{
+            case 0:{
                 strMonth = "Jan";
                 break;
             }
-            case 2:{
+            case 1:{
                 strMonth = "Feb";
                 break;
             }
-            case 3:{
+            case 2:{
                 strMonth = "Mar";
                 break;
             }
-            case 4:{
+            case 3:{
                 strMonth = "Apr";
                 break;
             }
-            case 5:{
+            case 4:{
                 strMonth = "May";
                 break;
             }
-            case 6:{
+            case 5:{
                 strMonth = "Jun";
                 break;
             }
-            case 7:{
+            case 6:{
                 strMonth = "Jul";
                 break;
             }
-            case 8:{
+            case 7:{
                 strMonth = "Aug";
                 break;
             }
-            case 9:{
+            case 8:{
                 strMonth = "Sep";
                 break;
             }
-            case 10:{
+            case 9:{
                 strMonth = "Oct";
                 break;
             }
-            case 11:{
+            case 10:{
                 strMonth = "Nov";
                 break;
             }
